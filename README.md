@@ -8,6 +8,7 @@
 - **Autosave** feature to ensure your work is always saved.
 - Includes a **dyslexic font** for easier reading.
 - Supports **Light** and **Dark mode**.
+- Includes word count
 
 ## Installation
 
