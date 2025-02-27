@@ -1,67 +1,72 @@
 {
-  "name": "FumbleNote",
-  "version": "1.0.2",
-  "description": "A simple Text editor that solves issues within Windows generic text editor.",
-  "main": "main.js",
-  "build": {
-    "asar": true
-  },
-  "scripts": {
-    "start": "electron-forge start",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "package": "electron-forge package",
-    "make": "electron-forge make",
-    "publish": "electron-forge publish"
-  },
-  "author": "Adam Baker",
-  "license": "ISC",
-  "dependencies": {
-    "electron-packager": "^17.1.2",
-    "electron-squirrel-startup": "^1.0.1",
-    "word-count": "^0.2.2"
-  },
-  "devDependencies": {
-    "@electron-forge/cli": "^7.6.0",
-    "@electron-forge/maker-deb": "^7.6.0",
-    "@electron-forge/maker-dmg": "^7.6.0",
-    "@electron-forge/maker-rpm": "^7.6.0",
-    "@electron-forge/maker-squirrel": "^7.6.0",
-    "@electron-forge/maker-zip": "^7.6.0",
-    "@electron-forge/plugin-auto-unpack-natives": "^7.6.0",
-    "@electron-forge/plugin-fuses": "^7.6.0",
-    "@electron-forge/publisher-github": "^7.7.0",
-    "@electron/fuses": "^1.8.0",
-    "countable": "^3.0.1",
-    "electron": "^33.2.1"
-  },
-  "config": {
-    "forge": {
-      "makers": [
-        {
-          "name": "@electron-forge/maker-dmg",
-          "platforms": [
-            "darwin"
-          ]
+    "name": "FumbleNote",
+    "version": "1.0.2",
+    "description": "A simple text editor that solves issues within Windows generic text editor.",
+    "main": "main.js",
+    "scripts": {
+      "start": "electron-forge start",
+      "package": "electron-forge package",
+      "make": "electron-forge make",
+      "publish": "electron-forge publish"
+    },
+    "author": "Adam Baker",
+    "license": "ISC",
+    "dependencies": {
+      "electron-squirrel-startup": "^1.0.1",
+      "word-count": "^0.2.2"
+    },
+    "devDependencies": {
+      "@electron-forge/cli": "^7.6.0",
+      "@electron-forge/maker-dmg": "^7.6.0",
+      "@electron-forge/maker-squirrel": "^7.6.0",
+      "@electron-forge/maker-deb": "^7.7.0",
+      "@electron-forge/maker-zip": "^7.6.0",
+      "@electron-forge/publisher-github": "^7.7.0",
+      "electron": "^33.2.1"
+    },
+    "config": {
+      "forge": {
+        "packagerConfig": {
+          "arch": ["arm64", "x64"],
+          "icon": "assets/AppIcon.icns"
         },
-        {
-          "name": "@electron-forge/maker-zip",
-          "platforms": [
-            "darwin"
-          ]
-        }
-      ],
-      "publishers": [
-        {
-          "name": "@electron-forge/publisher-github",
-          "config": {
-            "repository": {
-              "owner": "abker0",
-              "name": "FumbleNote"
-            },
-            "prerelease": false
+        "electronPackagerConfig": {
+          "wine": "/opt/homebrew/bin/wine",
+          "mono": "/opt/homebrew/bin/mono"
+        },
+        "makers": [
+          {
+            "name": "@electron-forge/maker-dmg",
+            "platforms": ["darwin"],
+            "config": {
+              "format": "ULFO"
+            }
+          },
+          {
+            "name": "@electron-forge/maker-zip",
+            "platforms": ["darwin", "win32", "linux"]
+          },
+          {
+            "name": "@electron-forge/maker-squirrel",
+            "platforms": ["win32"],
+            "config": {
+              "name": "FumbleNote",
+              "setupIcon": "assets/AppIcon.ico"
+            }
+          },
+          {
+            "name": "@electron-forge/maker-deb",
+            "platforms": ["linux"],
+            "config": {
+              "options": {
+                "maintainer": "Adam Baker",
+                "homepage": "https://github.com/abker0",
+                "icon": "assets/AppIcon.png",
+                "arch": ["arm64", "x64"]
+              }
+            }
           }
-        }
-      ]
+        ]
+      }
     }
   }
-}
