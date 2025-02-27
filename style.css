@@ -1,0 +1,170 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+.title-bar {
+    height: 35px;
+    width: 100%;
+    background-color: rgb(30, 31, 34);
+    display: flex;
+    align-items: flex-end;
+    outline: 2px black;
+    position: fixed;
+    -webkit-user-select: none;
+    -webkit-app-region: drag;
+    
+}
+
+body {
+    margin: 0;
+    background-color: rgb(43, 45, 49);
+}
+
+.themeicon {
+    margin-top: -5px;
+    width: 25px;
+    height: 25px;
+    margin-top: 5px;
+    -webkit-app-region: no-drag;
+}
+
+.themeicon:hover {
+    transform: scale(1.08);
+    animation-duration: 0.5s;
+}
+
+
+.savebutton {
+    margin-top: 1px;
+    width: 25px;
+    height: 25px;
+    margin-top: 5px;
+    padding-right: 5px;
+    filter: invert(100%);
+    -webkit-app-region: no-drag;
+}
+
+span {
+    margin-left: 87%;
+    position: absolute;
+}
+
+.newbutton {
+    filter: invert(100%);
+    margin-top: 1px;
+    width: 25px;
+    height: 25px;
+    margin-top: 5px;
+    padding-right: 5px;
+    filter: invert(100%);
+    -webkit-app-region: no-drag;
+}
+
+.newbutton:hover {
+    transform: scale(1.08);
+    animation-duration: 0.5s
+}
+
+.savebutton:hover {
+    transform: scale(1.08);
+    animation-duration: 0.5s
+}
+
+
+.openbutton {
+    filter: invert(100%);
+    margin-top: 1px;
+    width: 25px;
+    height: 25px;
+    margin-top: 5px;
+    padding-right: 5px;
+    filter: invert(100%);
+    -webkit-app-region: no-drag;
+}
+
+.openbutton:hover {
+    transform: scale(1.08);
+    animation-duration: 0.5s
+}
+
+.filename {
+    margin: auto;
+    font-family: sans-serif;
+    color: white;
+    position: absolute;
+    left: 45%; /* Move slightly to the left */
+    transform: translateX(-50%);
+    margin-left: 80px;
+    font-size: 1.2em;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 35px;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.wordcount {
+    font-size: 1em;
+    margin: auto;
+    font-family: sans-serif;
+    color: white;
+    position: absolute;
+    left: 63%;
+    transform: translateX(-50%);
+    margin-left: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 35px;
+    white-space: nowrap;
+    width: 100%;
+}
+
+
+.filename {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    font-family: sans-serif;
+    color: white;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+textarea {
+    width: 100vw;
+    height: 100vh;
+    resize: none;
+    background-color: transparent;
+    border: none;
+    flex: 1;
+    padding: 10px;
+    padding-left: 15px;
+    padding-top: 50px;
+    font-family: sans-serif;
+    font-size: 1em;
+    color: white;
+    max-width: 100%;
+    overflow-x: hidden;
+
+}
+
+textarea:focus {
+    outline: none;
+    border: 0px solid #006CFF;
+}
+
+.dysfontbutton {
+    margin-top: 1px;
+    width: 25px;
+    height: 25px;
+    margin-top: 5px;
+    padding-right: 5px;
+    filter: invert(100%);
+    -webkit-app-region:no-drag;
+}
+
+.dysfontbutton:hover {
+    transform: scale(1.08);
+    animation-duration: 0.5s
+}

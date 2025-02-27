@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/open-dyslexic" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Security-Policy" content="script-src, 'self';">
+    <title>Document</title>
+</head>
+    <div class="title-bar" id="titlebar">
+        <h4 class="filename" id="filenameid">No File Open</h4>
+        <h4 id="wordcountid" class="wordcount"></h4>
+        <span>
+            <img src="assets/icons/Open.png" alt="open" class="openbutton" id="openbuttonicon">
+            <img src="assets/icons/New.png" alt="New" class="newbutton" id="newbuttonicon">
+            <img class="savebutton" id="savebuttonicon" src="assets/icons/Save.png" alt="savebutton">
+            <img src="assets/icons/dys.png" alt="Dyslexic font" class="dysfontbutton" id="dysfont">
+            <img class="themeicon" id="themebuttonicon" src="assets/icons/Lightmode.png" alt="themebutton">
+        </span>
+    </div>
+<body class="body">
+    <main>
+        <textarea id="textareaid" spellcheck="false" disabled></textarea>
+    </main>
+    <script src="renderer.js"></script>
+</body>
+</html>
