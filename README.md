@@ -34,4 +34,4 @@ This is **not** intended for professional use, nor is it designed for critical o
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](https://opensource.org/license/mit).
