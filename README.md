@@ -11,7 +11,7 @@
 
 ## Installation
 
-1. **Download** the latest version for your platform from the [Releases](https://github.com/yourusername/FumbleNote/releases) page.
+1. **Download** the latest version for your platform from the [Releases]([https://github.com/yourusername/FumbleNote/releases](https://github.com/abker0/FumbleNote/releases/tag/1.0)) page.
 2. **Install** the downloaded app by opening the `.dmg` file (for MacOS).
 3. **Launch** the app and start using it.
 
